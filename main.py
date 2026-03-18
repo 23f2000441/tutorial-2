@@ -1,6 +1,8 @@
-def main():
-    print("Hello from tutorial-2!")
+from flask import Flask
+app=Flask(__name__)
+@app.route('/')
+def hello ( ):
+    return "Hi Everyone"
+if __name__== '__main__':
+    app.run(debug=True)
 
-
-if __name__ == "__main__":
-    main()
