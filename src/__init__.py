@@ -20,5 +20,8 @@ def create_app(test_config=None):
     def hello():
         return 'Hi Mrityunjay'
 
+    from . import db
+    db.init_app(app)
+
     return app
 
